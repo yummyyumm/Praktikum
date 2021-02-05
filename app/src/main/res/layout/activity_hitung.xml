@@ -7,7 +7,7 @@
     tools:context=".HitungActivity">
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/editLebar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/editPanjang"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -48,7 +48,7 @@
         android:layout_marginStart="16dp"
         android:text="Lebar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/editPanjang" />
 
     <TextView
         android:id="@+id/textView3"
@@ -57,10 +57,10 @@
         android:layout_marginStart="16dp"
         android:text="Tinggi"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/editLebar" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/editTinggi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonHitung"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -84,14 +84,14 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textHasil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/buttonHitung"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTinggi" />
 </androidx.constraintlayout.widget.ConstraintLayout>
