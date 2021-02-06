@@ -15,12 +15,17 @@ private const val KERTAS = 3
 
 class GameActivity : AppCompatActivity() {
 
+    companion object{
+        const val EXTRA_USER = "username"
+    }
 
-
+    var username : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
+
+        username = intent.getStringExtra(EXTRA_USER).toString()
 
 
         val textHasil = findViewById<TextView >(R.id.textHasil)
@@ -79,16 +84,16 @@ class GameActivity : AppCompatActivity() {
     fun suwit(pilihanPlayer: Int, pilihanKomputer: Int):String{
         var hasil: String= ""
         if (pilihanPlayer == pilihanKomputer) {
-            hasil = "SERI"
+            hasil = username + " SERI"
         }
         else if((pilihanPlayer == BATU && pilihanKomputer == KERTAS) ||
                 (pilihanPlayer == GUNTING && pilihanKomputer == BATU) ||
                 (pilihanPlayer == KERTAS && pilihanKomputer == GUNTING)) {
-            hasil = "YOU LOSE"
+            hasil = username + " YOU LOSE"
 
         }
         else {
-            hasil = "YOU WIN"
+            hasil = username + " YOU WIN"
 
         }
 
